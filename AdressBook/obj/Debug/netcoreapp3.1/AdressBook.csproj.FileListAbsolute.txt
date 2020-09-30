@@ -1,0 +1,13 @@
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\bin\Debug\netcoreapp3.1\AdressBook.exe
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\bin\Debug\netcoreapp3.1\AdressBook.deps.json
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\bin\Debug\netcoreapp3.1\AdressBook.runtimeconfig.json
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\bin\Debug\netcoreapp3.1\AdressBook.runtimeconfig.dev.json
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\bin\Debug\netcoreapp3.1\AdressBook.dll
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\bin\Debug\netcoreapp3.1\AdressBook.pdb
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.csprojAssemblyReference.cache
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.AssemblyInfoInputs.cache
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.AssemblyInfo.cs
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.csproj.CoreCompileInputs.cache
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.dll
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.pdb
+C:\Users\NAGENDRA AND JANAKI\source\repos\AdressBook\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.genruntimeconfig.cache
