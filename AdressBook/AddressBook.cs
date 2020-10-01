@@ -30,6 +30,19 @@ namespace AddressBook
                 {
                     cc.SetPhoneNo(newnumber);
                     Console.WriteLine("Number edited successfully");
+                    break;
+                }
+            }
+        }
+        public void RemoveContact(String rname)
+        {
+            foreach (Class1 cc in list)
+            {
+                if (cc.GetName().Equals(rname))
+                {
+                    list.Remove(cc);
+                    Console.WriteLine("Number removed successfully");
+                    break;
                 }
             }
         }
