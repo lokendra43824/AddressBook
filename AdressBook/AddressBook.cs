@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -20,6 +21,17 @@ namespace AddressBook
         public List<Class1> ViewAddressBook()
         {
             return list;
+        }
+        public void EditNumber(String ename, String newnumber)
+        {
+            foreach (Class1 cc in list)
+            {
+                if (cc.GetName().Equals(ename))
+                {
+                    cc.SetPhoneNo(newnumber);
+                    Console.WriteLine("Number edited successfully");
+                }
+            }
         }
     }
 }
