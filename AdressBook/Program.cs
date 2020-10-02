@@ -1,82 +1,106 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Transactions;
-using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 
-namespace AddressBook
+namespace AddressBookProblem
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            int choice = 0;
-            AddressBook ab = new AddressBook();
-            do
+
+            Console.WriteLine("Welcome to Address Book Problem\nChoose one of the option");
+            //Constants:
+
+            const int ADD_ADDRESSBOOK = 1;
+            const int ADD_CONTACT = 1;
+            const int EDIT_CONTACT = 2;
+            const int DELETE_CONTACT = 3;
+            //variables
+            bool b1 = true;
+            while (b1)
             {
-                Console.WriteLine("Enter your choice :");
-                Console.WriteLine("1. Add Contact.");
-                Console.WriteLine("2. View all Contacts.");
-                Console.WriteLine("3.Edit existing contacts.");
-                Console.WriteLine("4.Remove a contact.");
-                Console.WriteLine("5.Exit.");
-                choice = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\n1.Add AddressBook\n2.Exit\n");
+                int choose1 = Convert.ToInt32(Console.ReadLine());
 
-                if (choice == 1)
+                switch (choose1)
                 {
+                    case ADD_ADDRESSBOOK:
 
-                    Console.WriteLine("Enter your Name : ");
-                    String name = Console.ReadLine();
-                    Console.WriteLine("Enter your address : ");
-                    String address = Console.ReadLine();
-                    Console.WriteLine("Enter your city : ");
-                    String city = Console.ReadLine();
-                    Console.WriteLine("Enter your state : ");
-                    String state = Console.ReadLine();
-                    Console.WriteLine("Enter your zip : ");
-                    String zip = Console.ReadLine();
-                    Console.WriteLine("Enter your contact no. : ");
-                    String contactNo = Console.ReadLine();
-                    Console.WriteLine("Enter your email : ");
-                    String mailID = Console.ReadLine();
+                        AddressBook ad = new AddressBook();
+                        bool b = true;
 
-                    Class1 c = new Class1(name, address, city, state, zip, contactNo, mailID);
+                        while (b)
+                        {
+                            Console.WriteLine("\n1.Add contacts\n2.Edit Contact using name\n3.Delete Contact using name\n4.Exit");
 
-                    ab.AddAddress(c);
+                            int choice = Convert.ToInt32(Console.ReadLine());
+
+                            switch (choice)
+                            {
+                                case ADD_CONTACT:
+                                    Console.WriteLine("\nAdding a new Contact\n");
+                                    ad.AddContact();
+                                    break;
+                                case EDIT_CONTACT:
+                                    Console.WriteLine("Edit Contact Using name\n");
+                                    Console.WriteLine("Enter First Name: ");
+                                    String fname = Console.ReadLine();
+
+                                    Console.WriteLine("Enter last Name: ");
+                                    String lname = Console.ReadLine();
+
+                                    bool isEdited = ad.EditContact(fname, lname);
+
+                                    if (isEdited)
+                                    {
+                                        Console.WriteLine("\nDetails Updated SuccessFully!!\n");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("\nNo contact exits with this name\nEdite failed!!\n");
+                                    }
+                                    break;
+
+                                case DELETE_CONTACT:
+                                    Console.WriteLine("Delete Contact Using name\n");
+                                    Console.WriteLine("Enter First Name: ");
+                                    String fName = Console.ReadLine();
+
+                                    Console.WriteLine("Enter last Name: ");
+                                    String lName = Console.ReadLine();
+
+                                    bool isDeleted = ad.DeleteContact(fName, lName);
+
+                                    if (isDeleted)
+                                    {
+                                        Console.WriteLine("\nContact SuccessFully!!\n");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("\nNo contact exits with this name\nDelete failed!!\n");
+                                    }
+                                    break;
+                                default:
+                                    b = false;
+                                    break;
+                            }
+
+                        }
+
+                        break;
+
+                    default:
+                        b1 = false;
+                        break;
+
                 }
-                else if (choice == 2)
-                {
-                    List<Class1> li = ab.ViewAddressBook();
-                    foreach (Class1 cl in li)
-                    {
-                        Console.WriteLine("Name : " + cl.GetName());
-                        Console.WriteLine("Address : " + cl.GetAddress());
-                        Console.WriteLine("City : " + cl.GetCity());
-                        Console.WriteLine("State : " + cl.GetState());
-                        Console.WriteLine("zip : " + cl.GetZip());
-                        Console.WriteLine("Contact No. : " + cl.GetPhoneNo());
-                        Console.WriteLine("Email ID : " + cl.GetEmail());
-                    }
-                }
-                else if (choice == 3)
-                {
-                    Console.WriteLine("Enter the name :");
-                    String ename = Console.ReadLine();
-                    Console.WriteLine("Enter the new number for " + ename);
-                    String newnumber = Console.ReadLine();
-                    ab.EditNumber(ename, newnumber);
-                }
-                else if (choice == 4)
-                {
-                    Console.WriteLine("Enter the name :");
-                    String rname = Console.ReadLine();
-                    ab.RemoveContact(rname);
-                }
-                else
-                {
-                    break;
-                }
-            } while (choice != 5);
+
+                Console.Out.WriteLine("*******************************************\n");
+
+            }
+
+
         }
+
     }
 }
